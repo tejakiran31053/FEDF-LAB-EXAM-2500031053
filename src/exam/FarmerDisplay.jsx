@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const Display = () => {
+const FarmerDisplay = () => {
   const [farmers, setFarmers] = useState([]);
 
   useEffect(() => {
@@ -15,20 +15,31 @@ const Display = () => {
       {farmers.length === 0 ? (
         <p>No farmers registered</p>
       ) : (
-        <div>
-          {farmers.map((farmer, index) => (
-            <div key={index}>
-              <h3>{farmer.name}</h3>
-              <p>Age: {farmer.age}</p>
-              <p>Gender: {farmer.gender}</p>
-              <p>Email: {farmer.email}</p>
-              <p>Acres: {farmer.acres}</p>
-            </div>
-          ))}
-        </div>
+        <table border="1"  style={{ width: '40%', marginTop: '10px' }}>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Age</th>
+              <th>Gender</th>
+              <th>Email</th>
+              <th>Acres</th>
+            </tr>
+          </thead>
+          <tbody>
+            {farmers.map((farmer, index) => (
+              <tr key={index}>
+                <td>{farmer.name}</td>
+                <td>{farmer.age}</td>
+                <td>{farmer.gender}</td>
+                <td>{farmer.email}</td>
+                <td>{farmer.acres}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
       )}
     </div>
   );
 };
 
-export default Display;
+export default FarmerDisplay;

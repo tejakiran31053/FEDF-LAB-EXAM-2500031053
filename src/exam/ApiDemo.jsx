@@ -28,7 +28,7 @@ const ApiDemo = () => {
       {error && <p>{error}</p>}
 
       {!loading && !error && (
-        <table border="1" cellPadding="10" style={{ borderCollapse: 'collapse', marginTop: '20px' }}>
+        <table border="1"  style={{ marginTop: '20px' , width: '40%'}}>
           <thead>
             <tr>
               <th>Name</th>
