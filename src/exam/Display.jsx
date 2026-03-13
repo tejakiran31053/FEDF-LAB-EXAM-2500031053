@@ -13,7 +13,7 @@ const Display = () => {
       <h2>Registered Farmers</h2>
 
       {farmers.length === 0 ? (
-        <p>No farmers registered yet.</p>
+        <p>No farmers registered</p>
       ) : (
         <div>
           {farmers.map((farmer, index) => (
