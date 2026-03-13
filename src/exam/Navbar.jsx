@@ -7,9 +7,9 @@ const Navbar = () => {
       <h2>Farmer Portal</h2>
 
       <NavLink to="/">Home</NavLink> |
-      <NavLink to="/register"> Registration</NavLink> |
-      <NavLink to="/display"> Display</NavLink> |
-      <NavLink to="/api"> API Demo</NavLink>
+      <NavLink to="/register"> FamerRegistration</NavLink> |
+      <NavLink to="/display"> FarmerDisplay</NavLink> |
+      <NavLink to="/api"> ApiDemo</NavLink>
 
     </nav>
   );

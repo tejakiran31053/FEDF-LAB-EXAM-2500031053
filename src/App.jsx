@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './exam/Navbar';
 import Home from './exam/Home';
 import Registration from './exam/Registration';
-import Display from './exam/Display';
+import Display from './exam/FarmerDisplay';
 import ApiDemo from './exam/ApiDemo';
 
 function App() {

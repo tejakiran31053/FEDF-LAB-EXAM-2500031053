@@ -28,16 +28,26 @@ const ApiDemo = () => {
       {error && <p>{error}</p>}
 
       {!loading && !error && (
-        <ul>
-          {companies.map((company, index) => (
-            <li key={index}>
-              <strong>{company.name || company.companyName || 'Unknown Company'}</strong> -
-              Industry: {company.industry || 'Tech'},
-              Employees: {company.employees || company.employeeCount || 'N/A'},
-              Location: {company.location || company.country || 'Global'}
-            </li>
-          ))}
-        </ul>
+        <table border="1" cellPadding="10" style={{ borderCollapse: 'collapse', marginTop: '20px' }}>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Industry</th>
+              <th>Employees</th>
+              <th>Location</th>
+            </tr>
+          </thead>
+          <tbody>
+            {companies.map((company, index) => (
+              <tr key={index}>
+                <td>{company.name || company.companyName || 'Unknown Company'}</td>
+                <td>{company.industry || 'Tech'}</td>
+                <td>{company.employees || company.employeeCount || 'N/A'}</td>
+                <td>{company.location || company.country || 'Global'}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
       )}
     </div>
   );
