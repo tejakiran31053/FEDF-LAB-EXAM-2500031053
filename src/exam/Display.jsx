@@ -11,12 +11,13 @@ const Display = () => {
   return (
     <div>
       <h2>Registered Farmers</h2>
+
       {farmers.length === 0 ? (
         <p>No farmers registered yet.</p>
       ) : (
         <div>
           {farmers.map((farmer, index) => (
-            <div key={index} style={{ border: '1px solid black', margin: '10px', padding: '10px' }}>
+            <div key={index}>
               <h3>{farmer.name}</h3>
               <p>Age: {farmer.age}</p>
               <p>Gender: {farmer.gender}</p>

@@ -23,16 +23,17 @@ const ApiDemo = () => {
   return (
     <div>
       <h2>Corporate API Data</h2>
+
       {loading && <p>Loading data...</p>}
       {error && <p>{error}</p>}
-      
+
       {!loading && !error && (
         <ul>
           {companies.map((company, index) => (
             <li key={index}>
-              <strong>{company.name || company.companyName || 'Unknown Company'}</strong> - 
-              Industry: {company.industry || 'Tech'}, 
-              Employees: {company.employees || company.employeeCount || 'N/A'}, 
+              <strong>{company.name || company.companyName || 'Unknown Company'}</strong> -
+              Industry: {company.industry || 'Tech'},
+              Employees: {company.employees || company.employeeCount || 'N/A'},
               Location: {company.location || company.country || 'Global'}
             </li>
           ))}

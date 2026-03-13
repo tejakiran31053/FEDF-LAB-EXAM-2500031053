@@ -45,10 +45,9 @@ const Register = () => {
         <input
           type="text"
           name="name"
-          placeholder="Farmer Name"
+          placeholder="Name"
           value={farmer.name}
           onChange={handleChange}
-          required
         />
 
         <br /><br />
@@ -59,7 +58,6 @@ const Register = () => {
           placeholder="Age"
           value={farmer.age}
           onChange={handleChange}
-          required
         />
 
         <br /><br />
@@ -68,7 +66,6 @@ const Register = () => {
           name="gender"
           value={farmer.gender}
           onChange={handleChange}
-          required
         >
           <option value="">Select Gender</option>
           <option>Male</option>
@@ -83,7 +80,6 @@ const Register = () => {
           placeholder="Email"
           value={farmer.email}
           onChange={handleChange}
-          required
         />
 
         <br /><br />
@@ -94,7 +90,6 @@ const Register = () => {
           placeholder="Password"
           value={farmer.password}
           onChange={handleChange}
-          required
         />
 
         <br /><br />
@@ -105,12 +100,11 @@ const Register = () => {
           placeholder="Acres of Land"
           value={farmer.acres}
           onChange={handleChange}
-          required
         />
 
         <br /><br />
 
-        <button type="submit">Register Farmer</button>
+        <button type="submit">Register</button>
 
       </form>
     </div>
